@@ -94,6 +94,7 @@ app.put("/api/users/:id", async (req, res) => {
         const userId = req.params.id;
         const newData = req.body; // Received data is already in object format
         console.log(newData); // Log the received data to ensure it's correct
+        console.log(userId)
 
         // Assuming usersCollection is your database collection
         await usersCollection.doc(userId).update(newData);
